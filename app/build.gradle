@@ -5,12 +5,12 @@ plugins {
 
 android {
     namespace 'in.rouf.map'
-    compileSdk 32
+    compileSdk 31
 
     defaultConfig {
         applicationId "in.rouf.map"
         minSdk 23
-        targetSdk 32
+        targetSdk 31
         versionCode 1
         versionName "1.0"
         multiDexEnabled true
@@ -54,8 +54,8 @@ android {
 dependencies {
 
     implementation 'androidx.core:core-ktx:1.7.0'
-    implementation 'androidx.appcompat:appcompat:1.5.1'
-    implementation 'com.google.android.material:material:1.7.0'
+//    implementation 'androidx.appcompat:appcompat:1.5.1'
+//    implementation 'com.google.android.material:material:1.7.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.4'
@@ -63,6 +63,8 @@ dependencies {
 
 
     implementation "net.osmand:OsmAnd-java:master-snapshot:android@jar"
+    debugImplementation "net.osmand:OsmAnd:master-snapshot:debug@aar"
+    releaseImplementation "net.osmand:OsmAnd:master-snapshot:release@aar"
 
     implementation fileTree(include:  ['QtAndroid.jar', 'QtAndroidBearer.jar'], dir: 'libs')
 
@@ -104,5 +106,4 @@ dependencies {
     implementation 'com.jaredrummler:colorpicker:1.1.0'
     implementation 'com.google.android.gms:play-services-location:20.0.0'
     implementation "net.osmand:antpluginlib:3.8.0@aar"
-
 }

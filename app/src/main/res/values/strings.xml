@@ -1,3 +1,4 @@
 <resources>
 	<string name="app_name">Map</string>
+	<string name="download_map">Download map</string>
 </resources>
